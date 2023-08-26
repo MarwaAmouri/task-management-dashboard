@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom left, rgb(180, 106, 201) 30%, rgb(138, 127, 225) 50%, rgb(76, 57, 225) 20%, rgb(180, 106, 201) 0%, rgb(81, 66, 195) 50%);
+  background-attachment: fixed;
+}
+
+.tasks {
+  display: none;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.schedule-container {
+  width: 540px;
+  height: 1000;
+  background: #fff;
+  border-radius: 3px;
+  margin: 30px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding-bottom: 40px;
+}
+.schedule-container .schedule-header {
+  padding-left: 40px;
+  padding-top: 40px;
+  display: flex;
+}
+.schedule-container .number-container {
+  padding-left: 20px;
+}
+.schedule-container .six {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: rgb(103, 62, 237);
+  color: #fff;
+  padding: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.schedule-container .schedule {
+  display: flex;
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 600px;
+  color: rgb(69, 69, 69);
+}
+.schedule-container .sub-schedule-container1 {
+  margin: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 241, 193);
+}
+.schedule-container .sub-schedule-container2 {
+  margin: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(193, 233, 255);
+}
+.schedule-container .sub-schedule-container3 {
+  margin: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 193, 235);
+}
+.schedule-container .sub-schedule-container4 {
+  margin: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(193, 255, 230);
+}
+.schedule-container .pictures {
+  margin-top: 10px;
+  padding: 10px;
+}
+.schedule-container img {
+  border-radius: 50%;
+  padding: 1px;
+}
+.schedule-container .time-container {
+  display: flex;
+}
+.schedule-container .time {
+  padding-top: 10px;
+  font-size: 13px;
+}
+.schedule-container .more {
+  padding-left: 285px;
+}
+
+@media only screen and (max-height: 800px) {
+  .container {
+    height: 1000;
+    width: 540px;
+    background: #fff;
+    margin: 30px;
+    margin-top: 100px;
+    border-radius: 3px;
+  }
+  .tasks {
+    display: block;
+    width: 500px;
+    height: 1500;
+    background: #fff;
+    border-radius: 3px;
+    margin: 30px;
+    margin-top: 100px;
+  }
+  .schedule-container {
+    margin: 0px;
+    padding: 0px;
+    width: 540px;
+  }
+  .today-tasks {
+    font-size: 20px;
+    font-weight: 600px;
+    color: rgb(50, 50, 50);
+  }
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+    justify-content: center;
+  }
+  .nav-list li {
+    justify-content: center;
+    border-bottom: 2px solid rgb(191, 191, 191);
+  }
+  .nav-list li a {
+    display: block;
+    color: rgb(122, 121, 121);
+    text-align: center;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-list li a:hover {
+    color: rgb(51, 137, 57);
+    border-bottom: 2px solid rgb(73, 161, 79);
+    background: #d1cccc;
+  }
+  .nav-list .active {
+    color: rgb(51, 137, 57);
+    border-bottom: 2.5px solid rgb(73, 161, 79);
+  }
+  .todays-tasks-list {
+    display: flex;
+  }
+  .todays-tasks-list ul {
+    list-style-type: none;
+    color: rgb(122, 121, 121);
+    padding: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  .todays-tasks-list li {
+    color: rgb(122, 121, 121);
+    padding: 20px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+    margin-left: 0px;
+    /*
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+    .checkmark {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        padding-left: 0px;
+        background-color: #eee;
+      }
+
+       input:checked ~ .checkmark {
+        background-color: rgb(51, 137, 57);
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+       input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .checkmark:after {
+        left: 5px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }*/
+  }
+  .todays-tasks-list li .approved-status {
+    padding: 4px;
+    float: right;
+    margin-left: 130px;
+    border-radius: 10px;
+    background-color: rgba(66, 207, 113, 0.31);
+    color: rgb(7, 88, 34);
+    font-size: smaller;
+  }
+  .todays-tasks-list li .in-progress-status {
+    padding: 4px;
+    float: right;
+    margin-left: 130px;
+    border-radius: 10px;
+    background-color: rgba(198, 151, 233, 0.167);
+    color: rgb(107, 64, 228);
+    font-size: smaller;
+  }
+  .todays-tasks-list li .in-review-status {
+    padding: 4px;
+    float: right;
+    margin-left: 130px;
+    border-radius: 10px;
+    background-color: rgba(243, 114, 172, 0.255);
+    color: rgb(237, 68, 127);
+    font-size: smaller;
+  }
+  .upcoming-tasks-container {
+    display: flex;
+  }
+  .upcoming-tasks {
+    width: 500px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600px;
+    color: rgb(50, 50, 50);
+    padding-bottom: 20px;
+    margin-right: 15px;
+    border-bottom: 2px solid rgb(191, 191, 191);
+  }
+  .waiting-status {
+    padding: 4px;
+    float: right;
+    margin-left: 130px;
+    border-radius: 10px;
+    background-color: rgba(213, 209, 211, 0.255);
+    color: rgb(111, 111, 111);
+    font-size: smaller;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .container {
+    display: flex;
+    width: 740px;
+    padding-right: 0px;
+  }
+  .container .tasks {
+    width: 380px;
+    float: left;
+  }
+  .container .schedule-container {
+    width: 300px;
+    float: right;
+    margin-right: 0px;
+  }
+}/*# sourceMappingURL=styles.css.map */
