@@ -24,23 +24,28 @@ body {
 
 .container {
   overflow: hidden;
+  margin-bottom: 400px;
+  margin-right: 0px;
 }
 
 .schedule-container {
-  width: 540px;
-  height: 1000;
   background: #fff;
   border-radius: 3px;
   margin: 30px;
-  margin-top: 200px;
+  margin-right: 30px;
+  margin-top: 150px;
   margin-bottom: 200px;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 .schedule-container .schedule-header {
   padding-left: 40px;
+  float: left;
   padding-top: 40px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  padding-right: 30px;
   display: flex;
+  overflow: hidden;
 }
 .schedule-container .number-container {
   padding-left: 20px;
@@ -55,10 +60,14 @@ body {
 }
 .schedule-container .schedule {
   padding-left: 40px;
-  padding-top: 100px;
+  margin-top: 100px;
   font-size: 20px;
   font-weight: bold;
   color: rgb(122, 121, 121);
+}
+.schedule-container section {
+  height: 500px;
+  overflow-y: auto;
 }
 .schedule-container .sub-schedule-container1 {
   margin: 20px;
@@ -100,91 +109,85 @@ body {
   border-radius: 50%;
   padding: 1px;
 }
-.schedule-container .time-container {
-  display: flex;
-}
 .schedule-container .time {
   padding-top: 10px;
   font-size: 13px;
   color: rgb(122, 121, 121);
 }
 .schedule-container .more {
-  padding-left: 330px;
+  float: right;
+}
+.schedule-container .title {
+  color: #454545;
+  white-space: nowrap;
 }
 
 @media only screen and (max-height: 800px) {
   .container {
     background: #fff;
     margin: 30px;
-    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     border-radius: 3px;
   }
   .tasks {
     display: block;
-    width: 500px;
-    height: 1500;
     background: #fff;
     border-radius: 3px;
     margin: 30px;
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .schedule-container {
     margin: 0px;
     padding: 0px;
   }
+  section {
+    height: 400px;
+    overflow-y: auto;
+  }
   .today-tasks {
     font-size: 25px;
     font-weight: bold;
     color: #000000;
+    overflow: hidden;
   }
   .nav-list {
-    width: 400px;
-    list-style-type: none;
     display: flex;
-    margin: 0px;
-    margin-left: 50px;
-    padding: 0;
-    padding-right: 20px;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
-  .nav-list li {
-    justify-content: center;
-  }
-  .nav-list li a {
-    display: block;
-    color: rgb(122, 121, 121);
+  .nav-list > div {
+    width: 100px;
+    margin: 20px;
     text-align: center;
-    padding: 40px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
-  .nav-list li a:hover {
+  .nav-list > div a {
+    color: rgb(122, 121, 121);
+  }
+  .nav-list > div a:hover {
     color: rgb(51, 137, 57);
     border-bottom: 2px solid rgb(73, 161, 79);
-    background: #d1cccc;
+    background: rgba(240, 237, 237, 0.831372549);
+    padding: 20px 20px 21px 20px;
   }
-  .nav-list .active {
+  .nav-list > div .active {
     color: rgb(51, 137, 57);
     border-bottom: 2.5px solid rgb(73, 161, 79);
-  }
-  .todays-tasks-list {
-    display: flex;
+    padding: 20px 20px 21px 20px;
   }
   .todays-tasks-list ul {
     border-top: 2.5px solid rgb(209, 209, 209);
     list-style-type: none;
     color: rgb(122, 121, 121);
-    padding: 15px;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding: 0px;
     margin: 0px;
   }
   .todays-tasks-list li {
     color: rgb(122, 121, 121);
     padding: 20px;
     padding-left: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     padding-right: 0px;
     margin-left: 0px;
     font-weight: bold;
@@ -192,7 +195,6 @@ body {
   .todays-tasks-list li .approved-status {
     padding: 4px;
     float: right;
-    margin-left: 130px;
     border-radius: 10px;
     background-color: rgba(66, 207, 113, 0.31);
     color: rgb(7, 88, 34);
@@ -201,7 +203,6 @@ body {
   .todays-tasks-list li .in-progress-status {
     padding: 4px;
     float: right;
-    margin-left: 130px;
     border-radius: 10px;
     background-color: rgba(198, 151, 233, 0.167);
     color: rgb(107, 64, 228);
@@ -210,7 +211,6 @@ body {
   .todays-tasks-list li .in-review-status {
     padding: 4px;
     float: right;
-    margin-left: 130px;
     border-radius: 10px;
     background-color: rgba(243, 114, 172, 0.255);
     color: rgb(237, 68, 127);
@@ -231,7 +231,6 @@ body {
   .waiting-status {
     padding: 4px;
     float: right;
-    margin-left: 130px;
     border-radius: 10px;
     background-color: rgba(213, 209, 211, 0.255);
     color: rgb(111, 111, 111);
@@ -240,24 +239,27 @@ body {
 }
 @media only screen and (min-width: 800px) {
   .container {
+    margin-left: 70px;
+    margin-right: 70px;
     display: flex;
-    padding-right: 0px;
+    padding-left: 0px;
   }
   .container .nav-menu {
     display: none;
-  }
-  .container .tasks {
-    float: left;
   }
   .container .schedule-container {
     float: right;
     margin-right: 0px;
     border-left: 2px solid rgb(209, 209, 209);
   }
+  .container .schedule-container section {
+    overflow-y: scroll;
+  }
   .container .schedule-container .schedule-header {
     float: right;
     margin-right: 20px;
-    margin-left: 175px;
+    padding-right: 0px;
+    overflow-y: hidden;
   }
   .container .schedule-container .time {
     padding-top: 10px;
@@ -267,49 +269,21 @@ body {
   .container .schedule-container .more {
     padding-left: 100px;
   }
-  .container .nav-list {
-    margin: 0px;
-  }
-  .container li a {
-    padding: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .container .todays-tasks-list .approved-status {
-    margin-left: 30px;
-  }
-  .container .todays-tasks-list .in-review-status {
-    margin-left: 30px;
-  }
-  .container .todays-tasks-list .in-progress-status {
-    margin-left: 30px;
-  }
-  .container .waiting-status {
-    margin-left: 40px;
-  }
 }
-@media only screen and (min-width: 1000px) and (max-height: 800px) {
+@media only screen and (min-width: 1100px) and (max-height: 800px) {
   .container {
-    display: flex;
-    width: 1370px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
   }
   .container .tasks li a {
-    padding: 50px;
-    padding-top: 20px;
+    padding: 20px 20px 0px 20px;
     padding-bottom: 20px;
   }
-  .container .tasks .active {
-    margin-right: 40px;
-    padding-left: 35px;
-  }
   .container .schedule-container {
-    width: 400px;
     float: right;
     margin-right: 0px;
     border-left: 2px solid border-color;
-  }
-  .container .schedule-container .time-container {
-    width: 400px;
   }
   .container .schedule-container .time {
     font-size: 13px;
@@ -317,17 +291,11 @@ body {
   .container .schedule-container .more {
     padding-left: 200px;
   }
-  .container .nav-list {
-    margin-left: 50px;
-  }
-  .container .nav-list .li a {
-    padding-left: 40px;
-  }
   .container .nav-menu {
     background: rgba(205, 214, 241, 0.3843137255);
     display: block;
     float: left;
-    width: 310px;
+    margin-bottom: 0px;
     border-right: 2px solid rgba(192, 215, 232, 0.608);
   }
   .container .nav-menu ul {
@@ -336,8 +304,10 @@ body {
     padding-right: 0px;
     padding-left: 0px;
     margin: 40px;
+    margin-right: 100px;
     margin-top: 80px;
-    width: 182px;
+    margin-bottom: 0px;
+    white-space: nowrap;
   }
   .container .nav-menu li {
     color: #000000;
@@ -345,25 +315,19 @@ body {
     margin-left: 0px;
     font-weight: bold;
   }
+  .container .nav-menu li a {
+    color: #000000;
+  }
+  .container .nav-menu li a:hover {
+    background: #d1cccc;
+  }
   .container .nav-menu svg {
     color: #000000;
     margin-right: 20px;
     width: 17px;
     height: 17px;
   }
-  .container .space li {
+  .container .space li a {
     color: #9c9c9c;
-  }
-  .container .todays-tasks-list .approved-status {
-    margin-left: 130px;
-  }
-  .container .todays-tasks-list .upcoming-tasks {
-    width: 600px;
-  }
-  .container .waiting-status {
-    margin-left: 140px;
-  }
-  .container .schedule {
-    padding-top: 100px;
   }
 }/*# sourceMappingURL=styles.css.map */
