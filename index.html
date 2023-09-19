@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Management Dashboard UI</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -191,40 +194,42 @@
       <div class="tasks">
         <span class="today-tasks">Today Tasks</span>
         <nav class="nav-list">
-          <div><a href="#All">All</a></div>
-          <div><a href="#Important">Important</a></div>
-          <div><a href="#Notes">Notes</a></div>
-          <div><a class="active" href="#Links">Links</a></div>
-        </nav> 
+          <ul>
+            <li><a href="#All">All</a></li>
+            <li><a href="#Important">Important</a></li>
+            <li><a href="#Notes">Notes</a></li>
+            <li><a class="active" href="#Links">Links</a></li>
+          </ul>
+        </nav>
         <div class="todays-tasks-list">
           <ul>
             <li>
-              <input type="checkbox">
+              <input type="checkbox" title="checkbox">
                Dashboard Design Implementation
                <span class="approved-status">Approved</span>
             </li>
             <li>
-              <input type="checkbox">
+              <input type="checkbox" title="checkbox">
                Create a userflow 
               <span class="in-progress-status">In Progress</span>
             </li>
             <li>
-              <input type="checkbox"> 
+              <input type="checkbox" title="checkbox"> 
               Application Implementation
               <span class="in-review-status">In Review</span>
             </li>
             <li>
-              <input type="checkbox"> 
+              <input type="checkbox" title="checkbox"> 
               Create a Dashboard Design
               <span class="in-progress-status">In Progress</span>
             </li>
             <li>
-              <input type="checkbox">
+              <input type="checkbox" title="checkbox">
                Create a Web Application design
               <span class="approved-status">Approved</span>
             </li>
             <li>
-              <input type="checkbox"> 
+              <input type="checkbox" title="checkbox"> 
               Interactive Design
               <span class="in-review-status">In Review</span>
             </li>
@@ -236,22 +241,22 @@
         <div class="todays-tasks-list">
           <ul>
             <li>
-              <input type="checkbox" disabled> 
+              <input type="checkbox" title="checkbox" disabled> 
               Dashboard Design Implementation
               <span class="waiting-status">Waiting</span>
             </li>
             <li>
-              <input type="checkbox" disabled>
+              <input type="checkbox" title="checkbox" disabled>
                Create a userflow
               <span class="waiting-status">Waiting</span>
             </li>
             <li>
-              <input type="checkbox" disabled> 
+              <input type="checkbox" title="checkbox" disabled> 
               Application Implementation
               <span class="waiting-status">Waiting</span>
             </li>
             <li>
-              <input type="checkbox" disabled> 
+              <input type="checkbox" title="checkbox" disabled> 
               Create a Dashboard Design
               <span class="waiting-status">Waiting</span>
             </li>
@@ -283,80 +288,80 @@
         <section>
         <div class="sub-schedule-container1">
           <span class="time">08:00-09:00 AM</span>
-          <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+          <span class="more"><img src="more.png" alt="" style="width:20px; height:20px;"></span>
           <div class="title">Product Review</div>
           <div class="pictures">
-            <img src="./images/img1.jpg " style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img3.jpg" style="width:30px;height:30px;">
-            <img src="./images/img4.jpg" style="width:30px;height:30px;">
+            <img src="./images/img1.jpg " alt="" style="width:30px;height:30px;" >
+            <img src="./images/img2.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img3.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img4.jpg" alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container2">
             <span class="time">10:00-11:00 AM</span>
-            <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+            <span class="more"><img src="more.png" alt="" style="width:20px; height:20px;"></span>
           <div class="title">Design Meeting</div>
           <div class="pictures">
-            <img src="./images/img9.jpg " style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img8.jpg" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg " alt="" style="width:30px;height:30px;">
+            <img src="./images/img2.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img8.jpg" alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container3">
           <span class="time">01:00-02:00 PM</span>
-          <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+          <span class="more"><img src="more.png" alt="" style="width:20px; height:20px;"></span>
           <div class="title">Team Meeting</div>
           <div class="pictures">
-            <img src="./images/img9.jpg " style="width:30px;height:30px;">
-            <img src="./images/img6.jpg " style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img7.jpg" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg " alt="" style="width:30px;height:30px;">
+            <img src="./images/img6.jpg " alt="" style="width:30px;height:30px;">
+            <img src="./images/img2.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img7.jpg" alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container4">
           <span class="time">03:00-04:00 PM</span>
-          <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+          <span class="more"><img src="more.png" alt="" style="width:20px; height:20px;"></span>
           <div class="title">Release Event</div>
           <div class="pictures">
-            <img src="./images/img1.jpg" style="width:30px;height:30px;">
-            <img src="./images/img9.jpg" style="width:30px;height:30px;">
-            <img src="./images/img7.jpg" style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img3.jpg" style="width:30px;height:30px;">
+            <img src="./images/img1.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img7.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img2.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img3.jpg" alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container2">
           <span class="time">08:00-09:00 PM</span>
-          <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+          <span class="more"><img src="more.png" alt="" style="width:20px;height:20px;"></span>
           <div class="title">Release Event</div>
           <div class="pictures">
-            <img src="./images/img6.jpg " style="width:30px;height:30px;">
-            <img src="./images/img4.jpg" style="width:30px;height:30px;">
-            <img src="./images/img8.jpg" style="width:30px;height:30px;">
-            <img src="./images/img9.jpg " style="width:30px;height:30px;">
-            <img src="./images/img7.jpg " style="width:30px;height:30px;">
+            <img src="./images/img6.jpg " alt="" style="width:30px;height:30px;">
+            <img src="./images/img4.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img8.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg " alt="" style="width:30px;height:30px;">
+            <img src="./images/img7.jpg " alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container1">
           <span class="time">11:00-12:00 PM</span>
-          <sapn class="more"><img src="more.png" style="width:20px;height:20px;"></sapn>
+          <sapn class="more"><img src="more.png" alt="" style="width:20px;height:20px;"></sapn>
           <div class="title">Practise</div>
           <div class="pictures">
-            <img src="./images/img9.jpg" style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img8.jpg" style="width:30px;height:30px;">
-            <img src="./images/img9.jpg" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img2.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img8.jpg" alt="" style="width:30px;height:30px;">
+            <img src="./images/img9.jpg" alt="" style="width:30px;height:30px;">
           </div>
         </div>
         <div class="sub-schedule-container3">
           <span class="time">01:00-02:00 PM</span>
-          <span class="more"><img src="more.png" style="width:20px;height:20px;"></span>
+          <span class="more"><img src="more.png" alt="" style="width:20px;height:20px;" alt=""></span>
           <div class="title">Team Meeting</div>
           <div class="pictures">
-            <img src="./images/img9.jpg " style="width:30px;height:30px;">
+            <img src="./images/img9.jpg " style="width:30px;height:30px;" alt="">
             <img src="./images/img6.jpg " style="width:30px;height:30px;">
-            <img src="./images/img2.jpg" style="width:30px;height:30px;">
-            <img src="./images/img7.jpg" style="width:30px;height:30px;">
+            <img src="./images/img2.jpg" style="width:30px;height:30px;" alt="">
+            <img src="./images/img7.jpg" style="width:30px;height:30px;" alt="">
           </div>
         </div>
       </section>
